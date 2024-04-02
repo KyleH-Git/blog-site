@@ -1,1 +1,40 @@
 /* light + dark mode styles for site */
+
+:root{
+    --darkest-blue: #002E30;
+    --dark-blue: #0F4A4D;
+    --blue: #236467;
+    --lighter-blue: #417D80;
+    --lightest-blue: #67989A;
+    --orange: #E88227;
+    --darkest-orange: #843E00;
+    --dark-orange: #BB6110;
+    --light-orange: #F79F51;
+    --lightest-orange: #FFB97B;
+}
+
+*{
+    margin: 0 auto;
+}
+
+header{
+    background-color: #002E30;
+    color: #67989A;
+}
+
+body{
+    height: 100%;
+    background: linear-gradient(var(--dark-blue), #2d8085) fixed;
+}
+
+.display-flex{
+    display: flex;
+}
+
+.display-inline{
+    display: inline;
+}
+
+.justify-content-evenly{
+    justify-content: space-evenly;
+}

@@ -11,13 +11,31 @@
     <!-- html body -->
     <body>
         <!-- header with light/dark mode switch -->
-
+        <header class="display-flex justify-content-evenly">
+            <h1>Blog Site</h1>
+            <button>light/dark</button>
+        </header>
 
         <!-- left side of homepage, img + title -->
-
+        <section>
+         <div>
+            <p>placeholder img</p>
+         </div>
+        
         <!-- right side of homepage, form with Username, Title, and Content sections + Submit button -->
-
-
+        
+            <div class="container">
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name ="username"><br>
+                    <label for="postTitle">Title:</label>
+                    <input type="text" id="postTitle" name ="postTitle"><br>
+                    <label for="postContent">Content:</label>
+                    <textarea id="postContent" name ="postContent"></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
         <!-- JS link -->
         <script src="./assets/javascript/form.js"></script>
     </body>
