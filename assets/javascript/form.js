@@ -1,11 +1,35 @@
-//create vars that reference the DOM form
-
 //take inputs from form and store them in vars
+const usernameEl = document.querySelector("#username");
+const postTitleEl = document.querySelector("#postTitle");
+const postContentEl = document.querySelector("#postContent");
+const formEl = document.querySelector("#contentForm");
 
-//check that inputs are not empty for each field
 
-//create a post object with those vars
+function handlePostSubmit(event){
+    event.preventDefault();
+    //check that inputs are not empty for each field
+    if (usernameEl.value === ''){
+        alert('Please enter a Username.');
+    }else if(postTitleEl.value === ''){
+        alert('Post needs a title.');
+    }else if(postContentEl.value === ''){
+        alert('Add a post body!');
+    }else{
+        //create a post object with those vars
+        const blogPost = {
+            username: usernameEl.value.trim(),
+            postTitle: postTitleEl.value.trim(),
+            postContent: postContentEl.value.trim()
+        };
+        
+        //convert to string and store in local storage
+        localStorage.setItem('blogPost', JSON.stringify(blogPost));
+        console.log(blogPost)
+        //if successful redirect to blog page
+        location.href="./blog.html";
+        }
+    }
 
-//convert to string and store in local storage
+//add event listener for form, with handlePost function passed
 
-//enf of function redirect to blog page
+formEl.addEventListener('submit', handlePostSubmit);

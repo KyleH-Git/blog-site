@@ -1,14 +1,14 @@
 /* light + dark mode styles for site */
 
 :root{
-    --darkest-blue: #002E30;
-    --dark-blue: #0F4A4D;
     --blue: #236467;
-    --lighter-blue: #417D80;
+    --dark-blue: #0F4A4D;
+    --darkest-blue: #002E30;
+    --light-blue: #417D80;
     --lightest-blue: #67989A;
     --orange: #E88227;
-    --darkest-orange: #843E00;
     --dark-orange: #BB6110;
+    --darkest-orange: #843E00;
     --light-orange: #F79F51;
     --lightest-orange: #FFB97B;
 }

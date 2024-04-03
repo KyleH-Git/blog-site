@@ -4,3 +4,4 @@
 
 //print to console when displaying objects
 
+window.onload = loadFromLocalStorage;
