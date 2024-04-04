@@ -2,8 +2,8 @@
 //need to reassign styles to each element when clicked
 const currentMode = document.querySelector('.theme-switch input[type="checkbox"]');
 
-function switchTheme(e){
-    if(e.target.checked){
+function switchTheme(event){
+    if(event.target.checked){
         document.documentElement.setAttribute('data-theme', 'dark');
         console.log('dark theme');
     }

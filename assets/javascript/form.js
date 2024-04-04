@@ -8,8 +8,10 @@ const formEl = document.querySelector("#contentForm");
 function handlePostSubmit(event){
     event.preventDefault();
 
-    const storedPosts = JSON.parse(localStorage.getItem('storedPosts'));
-    
+    let storedPosts = JSON.parse(localStorage.getItem('storedPosts'));
+    if(storedPosts === null){
+        storedPosts = [];
+    }
         //check that inputs are not empty for each field
         if (usernameEl.value === ''){
             alert('Please enter a Username.');
@@ -23,20 +25,13 @@ function handlePostSubmit(event){
                 username: usernameEl.value.trim(),
                 postTitle: postTitleEl.value.trim(),
                 postContent: postContentEl.value.trim()
-            };
-            if(storedPosts !== null){
-                //doesn't let multiple posts be made
-                storedPosts.push(blogPost);
-                localStorage.setItem('storedPosts', JSON.stringify(storedPosts));
-            }
-            //convert to string and store in local storage
-            localStorage.setItem('storedPosts', JSON.stringify(blogPost));
-            console.log(storedPosts);
+            };             
+            storedPosts.push(blogPost);
+            localStorage.setItem('storedPosts', JSON.stringify(storedPosts));
             //if successful redirect to blog page
             location.href="./blog.html";
         }
 }
 
 //add event listener for form, with handlePost function passed
-
 formEl.addEventListener('submit', handlePostSubmit);

@@ -31,13 +31,11 @@ function createBlogPost(stored){
     divContainerEl.appendChild(postCard);
 }
 
-console.log(storedPosts);
 createBlogPost(storedPosts);
 
-// TypeError: data.forEach is not a function - loop not working 
-// storedPosts.forEach(post => {
-//     createBlogPost(post);
-// });
+storedPosts.forEach(post => {
+         createBlogPost(post);
+});
 
 backBtnEl.addEventListener('click', function (event) {
     event.preventDefault();
