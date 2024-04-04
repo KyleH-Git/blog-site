@@ -7,28 +7,35 @@ const formEl = document.querySelector("#contentForm");
 
 function handlePostSubmit(event){
     event.preventDefault();
-    //check that inputs are not empty for each field
-    if (usernameEl.value === ''){
-        alert('Please enter a Username.');
-    }else if(postTitleEl.value === ''){
-        alert('Post needs a title.');
-    }else if(postContentEl.value === ''){
-        alert('Add a post body!');
-    }else{
-        //create a post object with those vars
-        const blogPost = {
-            username: usernameEl.value.trim(),
-            postTitle: postTitleEl.value.trim(),
-            postContent: postContentEl.value.trim()
-        };
-        
-        //convert to string and store in local storage
-        localStorage.setItem('blogPost', JSON.stringify(blogPost));
-        console.log(blogPost)
-        //if successful redirect to blog page
-        location.href="./blog.html";
+
+    const storedPosts = JSON.parse(localStorage.getItem('storedPosts'));
+    
+        //check that inputs are not empty for each field
+        if (usernameEl.value === ''){
+            alert('Please enter a Username.');
+        }else if(postTitleEl.value === ''){
+            alert('Post needs a title.');
+        }else if(postContentEl.value === ''){
+            alert('Add a post body!');
+        }else{
+            //create a post object with those vars
+            const blogPost = {
+                username: usernameEl.value.trim(),
+                postTitle: postTitleEl.value.trim(),
+                postContent: postContentEl.value.trim()
+            };
+            if(storedPosts !== null){
+                //doesn't let multiple posts be made
+                storedPosts.push(blogPost);
+                localStorage.setItem('storedPosts', JSON.stringify(storedPosts));
+            }
+            //convert to string and store in local storage
+            localStorage.setItem('storedPosts', JSON.stringify(blogPost));
+            console.log(storedPosts);
+            //if successful redirect to blog page
+            location.href="./blog.html";
         }
-    }
+}
 
 //add event listener for form, with handlePost function passed
 

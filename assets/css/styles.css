@@ -1,31 +1,36 @@
 /* light + dark mode styles for site */
 
-:root{
-    --blue: #236467;
-    --dark-blue: #0F4A4D;
-    --darkest-blue: #002E30;
-    --light-blue: #417D80;
-    --lightest-blue: #67989A;
-    --orange: #E88227;
-    --dark-orange: #BB6110;
-    --darkest-orange: #843E00;
-    --light-orange: #F79F51;
-    --lightest-orange: #FFB97B;
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
 }
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+}
+
 
 *{
     margin: 0 auto;
 }
 
-header{
-    background-color: #002E30;
-    color: #67989A;
+body{
+    background: var(--bg-color);
+    color: var(--font-color);
 }
 
-body{
-    height: 100%;
-    background: linear-gradient(var(--dark-blue), #2d8085) fixed;
+header{
+    background: var(--heading-color);
+    color: var(--bg-color);
 }
+
 
 .display-flex{
     display: flex;
@@ -38,3 +43,70 @@ body{
 .justify-content-evenly{
     justify-content: space-evenly;
 }
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.wrap-column{
+    flex-direction: column;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    }
+    
+    .theme-switch-wrapper em {
+    margin-left: 10px;
+    font-size: 1rem;
+    }
+
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

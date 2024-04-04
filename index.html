@@ -5,27 +5,34 @@
         <meta charset="UTF-8">
         <title>Personal Blogsite</title>
         <!-- css link -->
-        <link rel="stylesheet" href="./assets/css/form.css">
         <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/form.css">    
     </head>
     <!-- html body -->
     <body>
         <!-- header with light/dark mode switch -->
         <header class="display-flex justify-content-evenly">
             <h1>Blog Site</h1>
-            <button>light/dark</button>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+              <em>Dark Mode</em>
+            </div>
+            
         </header>
 
         <!-- left side of homepage, img + title -->
-        <section>
-         <div>
-            <p>placeholder img</p>
-         </div>
+        <section class="container justify-content-evenly">
+            <div>
+                <p>placeholder img</p>
+            </div>
         
         <!-- right side of homepage, form with Username, Title, and Content sections + Submit button -->
         
-            <div class="container">
-                <form id="contentForm">
+            <div class="container display-flex">
+                <form id="contentForm" class ="container display-flex wrap-column">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name ="username"><br>
                     <label for="postTitle">Title:</label>

@@ -5,32 +5,38 @@
         <meta charset="UTF-8">
         <title>Personal Blogsite</title>
         <!-- css link -->
-        <link rel="stylesheet" href="./assets/css/blog.css">
         <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/blog.css">
     </head>
     <!-- html body -->
     <body>
         <!-- header with light/dark mode switch -->
         <header class="display-flex justify-content-evenly">
             <h1>Blog Site</h1>
-            <button>Back</button>
-            <button>light/dark</button>
+            <button id="back-button">Back</button>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+              <em>Dark Mode</em>
+            </div>
         </header>
 
         <!-- form content from local storage -->
-        <section>
-            <p>placeholder for content</p>
-        </section>
+        <section class= "display-flex wrap-column">
+            <div id="post-container">placeholder for content</div>
 
-        <!-- footer with info -->
-        <footer>
-            <h3>Made by Kyle</h3>
-            <ul>
-                <li>Portfolio: dev link</li>
-                <li>Blog: link to blog</li>
-                <li>email: email link</li>
-            </ul>
-        </footer>
+              <!-- footer with info -->
+            <footer>
+                <h3>Made by Kyle</h3>
+                <ul>
+                    <li>Portfolio: <a href="https://kyleh-git.github.io/dev-portfolio/">Dev Portfolio</a></li>
+                    <li>Blog: <a href="./index.html">Homepage</a></li>
+                    <li>email: placeholder</li>
+                </ul>
+            </footer>
+        </section>
         <!-- JS link -->
         <script src="./assets/javascript/blog.js"></script>
     </body>
