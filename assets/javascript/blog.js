@@ -19,7 +19,7 @@ function createBlogPost(stored){
     postFooter.textContent = stored.username;
 
     //apply styling from blog sheet to card elements
-    postCard.setAttribute('class', 'display-flex justify-content-center wrap-column')
+    postCard.setAttribute('class', 'display-flex justify-content-center wrap-column post-card')
     postHeader.setAttribute('class', 'post-header');
     postBody.setAttribute('class', 'post-body');
     postFooter.setAttribute('class', 'post-footer');

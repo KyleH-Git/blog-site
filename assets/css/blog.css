@@ -1,7 +1,11 @@
 /* blog page styles */
 
-.post-header{
+.post-card{
+border: 3px solid black;
+}
 
+.post-header{
+    border-bottom: 2px solid black;
 }
 
 .post-body{
@@ -9,5 +13,9 @@
 }
 
 .post-footer{
+   
+}
 
+footer{
+    margin-top: 25px;
 }
