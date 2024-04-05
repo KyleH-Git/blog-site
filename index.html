@@ -24,21 +24,22 @@
         </header>
 
         <!-- left side of homepage, img + title -->
-        <section class="container justify-content-evenly">
-            <div>
-                <p>placeholder img</p>
-            </div>
+        <section class="layout">
+            <aside class ="left-img">
+                <img src="./assets/images/blogimg.avif"/>
+            </aside>
         
         <!-- right side of homepage, form with Username, Title, and Content sections + Submit button -->
         
-            <div class="container display-flex">
-                <form id="contentForm" class ="container display-flex wrap-column">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name ="username"><br>
-                    <label for="postTitle">Title:</label>
-                    <input type="text" id="postTitle" name ="postTitle"><br>
-                    <label for="postContent">Content:</label>
-                    <textarea id="postContent" name ="postContent"></textarea><br>
+            <div class="right-content">
+                <h1 class="form-header"> What's on your mind?</h1>
+                <form id="contentForm" class ="content-form">
+                    <label class ="label" for="username">Username:</label>
+                    <input class ="input" type="text" id="username" name ="username"><br>
+                    <label class ="label"for="postTitle">Title:</label>
+                    <input class ="input" type="text" id="postTitle" name ="postTitle"><br>
+                    <label class ="label"for="postContent">Content:</label>
+                    <textarea class ="input" type="text" id="postContent" name ="postContent"></textarea><br>
                     <input id="submit" type="submit" value="Submit">
                 </form>
             </div>

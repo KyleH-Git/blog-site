@@ -31,11 +31,13 @@ function createBlogPost(stored){
     divContainerEl.appendChild(postCard);
 }
 
-createBlogPost(storedPosts);
-
-storedPosts.forEach(post => {
-         createBlogPost(post);
+if(storedPosts){
+    storedPosts.forEach(post => {
+        createBlogPost(post);
 });
+}
+
+
 
 backBtnEl.addEventListener('click', function (event) {
     event.preventDefault();

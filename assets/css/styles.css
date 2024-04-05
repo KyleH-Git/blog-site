@@ -16,21 +16,20 @@
     --heading-color: #818cab;
 }
 
-
-*{
-    margin: 0 auto;
-}
-
 body{
     background: var(--bg-color);
     color: var(--font-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header{
     background: var(--heading-color);
     color: var(--bg-color);
+    align-items: center;
+    width: 100%;
 }
-
 
 .display-flex{
     display: flex;
@@ -52,6 +51,7 @@ header{
     flex-direction: column;
 }
 
+/* dark mode switch styles */
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
